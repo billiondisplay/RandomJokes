@@ -1,32 +1,37 @@
 const jokeContainer = document.getElementById("joke");
 const btn = document.getElementById("btn");
 const url = "/api/joke"; // Now points to local API
-const spinner = document.getElementById('spinner');
+const spinner = document.getElementById("spinner");
 
 let getJoke = () => {
-    jokeContainer.classList.remove("fade");
-    spinner.style.display = "block";  // Show spinner
+  jokeContainer.classList.remove("fade");
+  spinner.style.display = "block"; // Show spinner
 
-    fetch(url)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Network response was not ok");
-        }
-        return response.json();
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
     })
-    .then(item => {
-        spinner.style.display = "none";  // Hide spinner
+    .then((item) => {
+      spinner.style.display = "none"; // Hide spinner
+
+      // Wait for a moment before showing the joke
+      setTimeout(() => {
         if (item.type === "twopart") {
-            jokeContainer.textContent = `${item.setup} ... ${item.delivery}`;
+          jokeContainer.textContent = `${item.setup} ... ${item.delivery}`;
         } else {
-            jokeContainer.textContent = item.joke;
+          jokeContainer.textContent = item.joke;
         }
         jokeContainer.classList.add("fade");
+      }, 100); // Slight delay before fade effect
     })
-    .catch(error => {
-        spinner.style.display = "none";  // Hide spinner on error
-        jokeContainer.textContent = 'Oops! Unable to fetch a joke. Please try again later.';
-        console.error('Error fetching the joke:', error);
+    .catch((error) => {
+      spinner.style.display = "none"; // Hide spinner on error
+      jokeContainer.textContent =
+        "Oops! Unable to fetch a joke. Please try again later.";
+      console.error("Error fetching the joke:", error);
     });
 };
 
