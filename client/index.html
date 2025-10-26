@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get random jokes and save your favorites!" />
+    <title>Random Jokes Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Main Joke Card -->
+      <div class="joke-card">
+        <div class="emoji">😂</div>
+        
+        <!-- Loading Spinner -->
+        <div id="spinner" class="spinner hidden"></div>
+        
+        <!-- Joke Display -->
+        <div id="joke-content" class="joke-content">
+          <p id="joke-text" class="joke-text"></p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+          <button id="new-joke-btn" class="btn btn-primary">
+            🎲 Get Random Joke
+          </button>
+          <button id="favorite-btn" class="btn btn-secondary" disabled>
+            ⭐ Add to Favorites
+          </button>
+          <button id="ai-joke-btn" class="btn btn-ai">
+            🤖 AI Joke
+          </button>
+        </div>
+
+        <!-- Toggle Favorites View -->
+        <button id="toggle-favorites-btn" class="btn btn-link">
+          View Favorites (<span id="favorites-count">0</span>)
+        </button>
+      </div>
+
+      <!-- Favorites Section -->
+      <div id="favorites-section" class="favorites-section hidden">
+        <div class="favorites-header">
+          <h2>⭐ Your Favorite Jokes</h2>
+          <button id="clear-favorites-btn" class="btn btn-danger-small">
+            Clear All
+          </button>
+        </div>
+        <div id="favorites-list" class="favorites-list">
+          <p class="empty-message">No favorites yet! Start adding jokes you love.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

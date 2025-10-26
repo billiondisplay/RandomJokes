@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "joke": "Why don't scientists trust atoms? Because they make up everything!",
+    "category": "science"
+  },
+  {
+    "id": 2,
+    "type": "twopart",
+    "setup": "Why did the chicken join a band?",
+    "delivery": "Because it had the drumsticks!",
+    "category": "general"
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "joke": "Parallel lines have so much in common. It's a shame they'll never meet.",
+    "category": "math"
+  },
+  {
+    "id": 4,
+    "type": "twopart",
+    "setup": "What do you call a fake noodle?",
+    "delivery": "An impasta!",
+    "category": "food"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "joke": "I told my wife she was drawing her eyebrows too high. She looked surprised.",
+    "category": "general"
+  },
+  {
+    "id": 6,
+    "type": "twopart",
+    "setup": "Why don't programmers like nature?",
+    "delivery": "It has too many bugs!",
+    "category": "programming"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "joke": "I'm reading a book about anti-gravity. It's impossible to put down!",
+    "category": "science"
+  },
+  {
+    "id": 8,
+    "type": "twopart",
+    "setup": "How does a penguin build its house?",
+    "delivery": "Igloos it together!",
+    "category": "animals"
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "joke": "Why did the scarecrow win an award? He was outstanding in his field!",
+    "category": "general"
+  },
+  {
+    "id": 10,
+    "type": "twopart",
+    "setup": "What did the ocean say to the beach?",
+    "delivery": "Nothing, it just waved!",
+    "category": "nature"
+  }
+]
